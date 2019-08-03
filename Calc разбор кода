@@ -1,0 +1,22 @@
+using System;
+
+namespace CalcEx
+{
+  class Programm
+  {
+    static void Main()
+    {
+      Calc c = new Calc(); //создаём экземпляр класса "Calc"
+      int  i = c.Add(5,8); // объявляем целочисленную переменную "i" и присваиваем ей значение, состоящее из вызова метода Add экземпляром класса
+      Console.WriteLine ("5+8 is {0}.", i);
+      Console.ReadLine();
+    }
+  }
+  class Calc //создаём класс "Calc"
+  {
+    public int Add (int x, int y) //объявляем публичный целочисленный метод "Add" с двумя переменными
+    {
+      return x+y; //возвращаем в метод значение суммы переменных
+    }
+  }
+}

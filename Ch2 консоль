@@ -12,6 +12,7 @@ namespace SirnpleCSharpConsole_App
             Console.WriteLine("**************************");
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ReadLine(); // метод вызывает остановку приложения
+            MessageBox.Show("All done!"); //вызов метода из класса библиотеки System.Windows.Forms
 
         }
     }

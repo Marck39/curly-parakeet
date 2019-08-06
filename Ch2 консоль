@@ -1,0 +1,18 @@
+namespace SirnpleCSharpConsole_App
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "My Rocking App"; //обращаемся к классу "Console", вызываем его внутренние методы
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine("**************************");
+            Console.WriteLine("Wellcome to My Rocking App");
+            Console.WriteLine("**************************");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ReadLine(); // метод вызывает остановку приложения
+
+        }
+    }
+}

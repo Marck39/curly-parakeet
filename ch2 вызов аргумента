@@ -1,0 +1,12 @@
+static int Main(string[] args)
+        {
+            Console.WriteLine("***** Му First С# Арр ***** ");
+            Console.WriteLine( "Hello World ! " ) ;
+            //for (int i =0; i< args.Length; i++)
+            string[] theArgs = Environment.GetCommandLineArgs();
+            foreach (string arg in args)
+            Console.WriteLine("Arg: {0}", args ); // должен отображаться аргумент при вызове консоли, но этого не происходит, просто запускается консоль
+            Console.ReadLine();
+
+            return -1;
+        }

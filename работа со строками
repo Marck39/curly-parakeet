@@ -1,0 +1,24 @@
+   {
+            string Name = "Olga";
+            Console.WriteLine("Value: {0}", Name);
+            Console.WriteLine("Name has {0} char", Name.Length);
+            Console.WriteLine("upper reg {0}", Name.ToUpper());
+            Console.WriteLine("low reg {0}", Name.ToLower());
+            Console.WriteLine("the l inside {0}", Name.Contains("l"));
+            Console.WriteLine("replacement {0}", Name.Replace("ga", "en"));
+            Console.WriteLine();
+            
+            StringBuilder sb = new StringBuilder("Games");
+            sb.Append(" \n");
+            sb.AppendLine("Half Life");
+            sb.AppendLine("Morrowind");
+            sb.AppendLine("Deus Ех " + "2");
+            sb.AppendLine(" System Shock");
+            Console.WriteLine(sb.ToString());
+            sb.Replace("2", " InvisiЬle War ");
+            Console.WriteLine(sb.ToString());
+            Console.WriteLine(" sb has {0} chars.", sb.Length);
+            Console.WriteLine();
+            Console.ReadLine();
+
+        }

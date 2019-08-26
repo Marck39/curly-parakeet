@@ -1,0 +1,32 @@
+static void Main (string[] args)
+            {
+            SimpleArrays();
+            Console.ReadLine();
+            }
+
+
+        static void SimpleArrays()
+        {
+            string[] gothic = { "tones", "bahuse", "sis" };
+            Console.WriteLine("array itself");
+            for (int i = 0; i < gothic.Length; i++)
+            {
+                Console.WriteLine(gothic[i] + ",");
+            }
+            Console.WriteLine("\n");
+            Array.Reverse(gothic);
+            Console.WriteLine("reverse");
+            for (int i = 0; i < gothic.Length; i++)
+            {
+                Console.WriteLine(gothic[i] + ",");
+            }
+            Console.WriteLine("\n");
+            Array.Clear(gothic,1,2);
+            Console.WriteLine("clear");
+            for (int i = 0; i < gothic.Length; i++)
+            {
+                Console.WriteLine(gothic[i] + ",");
+            }       
+
+        }      
+         

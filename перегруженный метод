@@ -1,0 +1,45 @@
+static void Main (string[] args)
+            {
+            Car chuck = new Car();
+            chuck.State();
+
+            Car fred = new Car("Fred");
+            fred.State();
+
+            Car nope = new Car("Nope", 50);
+            nope.State();
+                
+            Console.ReadLine();
+            }    
+
+
+
+class Car
+    {
+        public string Name;
+        public int Speed;
+        
+        public Car()
+        {
+            Name = "Chuck";
+            Speed = 10;
+        }
+        public Car (string pn)
+        {
+            Name = pn;
+        }
+        public Car (string pn, int cs)
+        {
+            Name = pn;
+            Speed = cs;
+        }
+        public void State()
+        {
+            Console.WriteLine(" {0} move {1} kph", Name, Speed);
+        }
+
+        public void SpeedUp (int delta)
+        {
+            Speed += delta;
+        }
+    }

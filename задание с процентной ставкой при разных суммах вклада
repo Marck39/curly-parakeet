@@ -1,0 +1,29 @@
+ static void Main(string[] args)
+        {
+            double n;
+            double x = Convert.ToDouble(Console.ReadLine());// сумма вклада
+            if(x<100)
+            {
+                n = x*0.05 + x;
+                Printer.Print(n);
+            }
+            else if(x>=100 && x<200)
+            {
+                n = x*0.07 + x;
+                Printer.Print(n);
+            }
+            else
+            {
+                n = x*0.1 + x;
+                Printer.Print(n);
+            }
+            Console.ReadLine();
+        }
+    }
+    class Printer //класс быстрой печати
+    {
+        public static void Print(object s)
+        {
+            Console.WriteLine(s);
+        }
+    }

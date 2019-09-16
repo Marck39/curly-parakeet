@@ -1,0 +1,30 @@
+static void Main(string[] args)
+        {
+            
+            Printer.Print("Введите номер операции: 1. Сложение 2. Вычитание 3.Умножение 4.Деление");
+            int x = Convert.ToInt32(Console.ReadLine());
+            switch (x)
+                {                
+                case 1: Printer.Print($"{x}- сложение") ;
+                    break;
+                case 2: Printer.Print($"{x}- вычитанеи");
+                    break;
+                case 3: Printer.Print($"{x}3- умножение");
+                    break;
+                case 4: Printer.Print($"{x}- деление");
+                    break;
+                default: Printer.Print("неизвестная операция");
+                    break;
+
+            }
+            Console.ReadLine();
+        }
+    }
+    class Printer //класс быстрой печати
+    {
+        public static void Print(object s)
+        {
+            Console.WriteLine(s);
+        }
+    }
+}

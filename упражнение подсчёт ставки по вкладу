@@ -1,0 +1,28 @@
+static void Main(string[] args)
+        {
+            double percent;// процентная ставка
+            double sum = Convert.ToDouble(Console.ReadLine());// сумма вклада
+            if(sum<100)
+            {
+                percent =0.05;
+            }
+            else if(sum>=100 && sum<200)
+            {
+                percent = 0.07;
+            }
+            else
+            {
+                percent = 0.1;
+            }
+            sum+= sum* percent+ 15;
+            Printer.Print($"Итог вложения = {sum}");
+            Console.ReadLine();
+        }
+    }
+    class Printer //класс быстрой печати
+    {
+        public static void Print(object s)
+        {
+            Console.WriteLine(s);
+        }
+    }

@@ -24,7 +24,7 @@ static void Main(string[] args)
                 Console.WriteLine(" З/п Employee составляет -" + SummEmpl);
             }
             //////////////////////////////////////////////////
-            float bonusMng = EmplCounter * SummEmpl * 0.5f / 100; // рассчёт бонусной части з/п менеджера
+            float bonusMng = EmplCounter * SummEmpl * 0.5f / 100; // расчёт бонусной части з/п менеджера
             Console.WriteLine("Бонус Manager составляет -" + bonusMng);
 
             float SummMan = BaseSumm + BaseSumm * 0.05f * JobEXP; // з/п мэнеджера     

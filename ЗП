@@ -12,9 +12,9 @@ static void Main(string[] args)
             Console.WriteLine("Введите базовую ставку");
             float BaseSumm = Convert.ToInt64(Console.ReadLine());
 
-            float SummEmpl = BaseSumm + BaseSumm * 0.03f * JobEXP;// з/п эмплоии
+            float SummEmpl = BaseSumm + BaseSumm * 0.03f * JobEXP; // з/п эмплоии
 
-            if (SummEmpl <= BaseSumm + BaseSumm * 30 / 100) // // проверка максимального размера бонуса
+            if (SummEmpl <= BaseSumm + BaseSumm * 30 / 100) // проверка максимального размера бонуса
             {
                 Console.WriteLine(" З/п Employee составляет -" + SummEmpl);
             }
@@ -32,7 +32,7 @@ static void Main(string[] args)
             if (SummMan <= BaseSumm + BaseSumm * 40 / 100) // проверка максимального размера бонуса
             {
                 float A = (SummMan + bonusMng);
-                Console.WriteLine(" З/п Manager составляет -"+A);
+                Console.WriteLine(" З/п Manager составляет -" + A);
             }
             else
             {
@@ -55,7 +55,7 @@ static void Main(string[] args)
             else
             {
                 SummSl = BaseSumm + BaseSumm * 35 / 100;
-                float b = (SummSl + +bonusSl);
+                float b = (SummSl + bonusSl);
                 Console.WriteLine(" З/п Salesman составляет -" + b);
             }
 

@@ -1,0 +1,63 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("Введите кол-во сотрудников статуса Employee");
+            int EmplCounter = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите кол-во сотрудников статуса Manager");
+            int MngCounter = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите рабочий стаж");
+            int JobEXP = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите базовую ставку");
+            float BaseSumm = Convert.ToInt64(Console.ReadLine());
+
+            float SummEmpl = BaseSumm + BaseSumm * 0.03f * JobEXP;// з/п эмплоии
+
+            if (SummEmpl <= BaseSumm + BaseSumm * 30 / 100) // // проверка максимального размера бонуса
+            {
+                Console.WriteLine(" З/п Employee составляет -" + SummEmpl);
+            }
+            else
+            {
+                SummEmpl = BaseSumm + BaseSumm * 30 / 100;
+                Console.WriteLine(" З/п Employee составляет -" + SummEmpl);
+            }
+            //////////////////////////////////////////////////
+            float bonusMng = EmplCounter * SummEmpl * 0.5f / 100; // рассчёт бонусной части з/п менеджера
+            Console.WriteLine("Бонус Manager составляет -" + bonusMng);
+
+            float SummMan = BaseSumm + BaseSumm * 0.05f * JobEXP; // з/п мэнеджера     
+
+            if (SummMan <= BaseSumm + BaseSumm * 40 / 100) // проверка максимального размера бонуса
+            {
+                float A = (SummMan + bonusMng);
+                Console.WriteLine(" З/п Manager составляет -"+A);
+            }
+            else
+            {
+                SummMan = BaseSumm + BaseSumm * 40 / 100;
+                float A = (SummMan + bonusMng);
+                Console.WriteLine(" З/п Manager составляет -" + A);
+            }
+            //////////////////////////////////////////////////
+            float bonusSl = SummMan * MngCounter + SummEmpl * EmplCounter; // расчёт з/п всех подчинённых отдела 
+            float a = (bonusSl *= 0.3f / 100);
+            Console.WriteLine($"Бонус Salesman составляет -" + a) ; // бонус сейлсмена
+
+            float SummSl = BaseSumm + BaseSumm * 0.01f * JobEXP; // з/п сейлсмена
+
+            if (SummSl <= BaseSumm + BaseSumm * 35 / 100) // проверка максимального размера бонуса
+            {
+                float b = (SummSl + +bonusSl);
+                Console.WriteLine(" З/п Salesman составляет -" + b);
+            }
+            else
+            {
+                SummSl = BaseSumm + BaseSumm * 35 / 100;
+                float b = (SummSl + +bonusSl);
+                Console.WriteLine(" З/п Salesman составляет -" + b);
+            }
+
+            Console.ReadKey();
+        }
